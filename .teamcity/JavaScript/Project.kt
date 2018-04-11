@@ -12,6 +12,7 @@ object Project : Project({
     id = "JavaScript"
     parentId = "_Root"
     name = "JavaScript"
+    description = "My JS Project"
 
     vcsRoot(JavaScript_HttpsGithubComOzonsozonsTeamcityCourseCards)
 
