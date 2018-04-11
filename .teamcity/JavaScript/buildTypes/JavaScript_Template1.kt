@@ -28,10 +28,5 @@ object JavaScript_Template1 : Template({
         stepsOrder = arrayListOf("RUNNER_6", "RUNNER_9")
     }
 
-    triggers {
-        vcs {
-            id = "vcsTrigger"
-            branchFilter = ""
-        }
-    }
+
 })

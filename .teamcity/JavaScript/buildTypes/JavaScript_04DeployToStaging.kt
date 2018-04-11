@@ -1,6 +1,7 @@
 package JavaScript.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.v2017_2.*
+import jetbrains.buildServer.configs.kotlin.v2017_2.triggers.vcs
 
 object JavaScript_04DeployToStaging : BuildType({
     uuid = "2c6879a5-a013-4077-ab0e-372593a9f60b"
@@ -24,6 +25,12 @@ object JavaScript_04DeployToStaging : BuildType({
         dependency(JavaScript.buildTypes.JavaScript_03InternetExplorer) {
             snapshot {
             }
+        }
+    }
+    triggers {
+        vcs {
+            id = "vcsTrigger"
+            branchFilter = ""
         }
     }
 })
