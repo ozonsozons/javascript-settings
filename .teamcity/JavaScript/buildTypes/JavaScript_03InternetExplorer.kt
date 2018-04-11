@@ -4,7 +4,7 @@ import jetbrains.buildServer.configs.kotlin.v2017_2.*
 
 object JavaScript_03InternetExplorer : BuildType({
     template(JavaScript.buildTypes.JavaScript_Template1)
-    uuid = "javascripttest_03_InternetExplorer"
+    uuid = "javascripttest_03_InternetExplorerTest"
     id = "JavaScript_03InternetExplorer"
     name = "03. InternetExplorer"
 
