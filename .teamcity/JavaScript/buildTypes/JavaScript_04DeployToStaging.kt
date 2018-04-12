@@ -20,5 +20,15 @@ object JavaScript_04DeployToStaging : BuildType({
             id = "vcsTrigger"
             branchFilter = ""
         }
+        dependency(JavaScript.buildTypes.JavaScript_03InternetExplorer) {
+            snapshot {
+            }
+        }
+    }
+    triggers {
+        vcs {
+            id = "vcsTrigger"
+            branchFilter = ""
+        }
     }
 })
