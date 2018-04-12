@@ -11,11 +11,4 @@ object JavaScript_03Firefox : BuildType({
     params {
         param("Browser", "Firefox")
     }
-
-    dependencies {
-        dependency(JavaScript.buildTypes.JavaScript_01FastTests) {
-            snapshot {
-            }
-        }
-    }
 })
