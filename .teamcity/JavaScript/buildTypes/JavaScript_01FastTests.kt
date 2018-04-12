@@ -8,7 +8,5 @@ object JavaScript_01FastTests : BuildType({
     id = "JavaScript_01FastTests"
     name = "01.Fast Tests"
 
-    params {
-        param("Browser", "PhantomJS")
-    }
+
 })

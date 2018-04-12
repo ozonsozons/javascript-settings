@@ -20,12 +20,7 @@ object JavaScript_Template1 : Template({
             id = "RUNNER_6"
             scriptContent = "npm install"
         }
-        script {
-            name = "Browser Tests"
-            id = "RUNNER_9"
-            scriptContent = "npm test -- --dingle-run --browsers %Browser% --colors false --reporters teamcity"
-        }
-        stepsOrder = arrayListOf("RUNNER_6", "RUNNER_9")
+        stepsOrder = arrayListOf("RUNNER_6")
     }
 
 
