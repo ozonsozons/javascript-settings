@@ -1,6 +1,7 @@
 package JavaScript.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.v2017_2.*
+import jetbrains.buildServer.configs.kotlin.v2017_2.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.v2017_2.triggers.vcs
 
 object JavaScript_04DeployToStaging : BuildType({
@@ -13,18 +14,17 @@ object JavaScript_04DeployToStaging : BuildType({
 
     }
 
-
-
-    triggers {
-        vcs {
-            id = "vcsTrigger"
-            branchFilter = ""
-        }
-        dependency(JavaScript.buildTypes.JavaScript_03InternetExplorer) {
-            snapshot {
-            }
+    steps {
+        script {
+            name = "IIS Deploy"
+            id = "RUNNER_6"
+            scriptContent = """
+rmdir /S /Q \inetpub\wwwroot
+xcopy /S /I /Y app \inetpub\wwwroot\
+                """
         }
     }
+
     triggers {
         vcs {
             id = "vcsTrigger"
