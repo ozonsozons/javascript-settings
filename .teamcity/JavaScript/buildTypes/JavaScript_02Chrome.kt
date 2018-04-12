@@ -11,11 +11,4 @@ object JavaScript_02Chrome : BuildType({
     params {
         param("Browser", "Chrome")
     }
-
-    dependencies {
-        dependency(JavaScript.buildTypes.JavaScript_01FastTests) {
-            snapshot {
-            }
-        }
-    }
 })
