@@ -11,11 +11,4 @@ object JavaScript_03InternetExplorer : BuildType({
     params {
         param("Browser", "IE")
     }
-
-    dependencies {
-        dependency(JavaScript.buildTypes.JavaScript_01FastTests) {
-            snapshot {
-            }
-        }
-    }
 })
